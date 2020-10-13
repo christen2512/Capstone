@@ -1,7 +1,9 @@
 #include "renderer.h"
 #include <iostream>
 #include <string>
-
+#include <memory>
+#include <mutex>
+std::mutex _mutex;
 Renderer::Renderer(const std::size_t screen_width,
                    const std::size_t screen_height,
                    const std::size_t grid_width, const std::size_t grid_height)
@@ -76,6 +78,7 @@ void Renderer::Render(Snake const snake, SDL_Point const &food) {
 }
 
 void Renderer::UpdateWindowTitle(int score, int fps) {
+  std::lock_guard<std::mutex> lock((_mutex));
   std::string title{"Snake Score: " + std::to_string(score) + " FPS: " + std::to_string(fps)};
   SDL_SetWindowTitle(sdl_window, title.c_str());
 }
