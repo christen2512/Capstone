@@ -3,14 +3,14 @@
 This is a starter repo for the Capstone project in the [Udacity C++ Nanodegree Program](https://www.udacity.com/course/c-plus-plus-nanodegree--nd213). The code for this repo was inspired by [this](https://codereview.stackexchange.com/questions/212296/snake-game-in-c-with-sdl) excellent StackOverflow post and set of responses.
 
 <img src="snake_game.gif"/>
-# The Capstone Snake Game project meets the following project requirements:
-# A.Introduction:
+## The Capstone Snake Game project meets the following project requirements:
+## A.Introduction:
 The user interacts with the game through a GameMenu which has the following options:
 1."New Game" which starts a new game of snake, at the end of it the user is being shown the score and the lenght of the snake. Also he needs to introduce a name to be added to a leaderboard.
 2."Leaderboard" if the user chooses this option he can look at the players with the highest point rating. The leaderboard is being displayed in the following way: 
 "Rank" which represents the position of the player , "Name" which represents the name of the player and last but not least "Points" which shows the points a player has got.
 3."Quit" this option closes the game.
-# B.Rubric points:
+## B.Rubric points:
 1.Loops and Functions --> The project code is OOP with measures taken to avoid fail states.
 2.I/O --> A text file is created if it does not exist in which some data is written and read from it. More can be seen in LeaderBoard.h header file.
 3.The project accepts user input and processes it --> The Game Menu handles this part of the project. More can be seen in Menu.h header file.
